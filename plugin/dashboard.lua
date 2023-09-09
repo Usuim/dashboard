@@ -16,12 +16,12 @@ vim.api.nvim_create_autocmd('UIEnter', {
       require('dashboard'):instance()
     end
     vim.cmd("stopinsert")
-    vim.cmd("keepalt file Dashboard")
+    vim.cmd("silent! keepalt file Dashboard")
   end,
 })
 
 vim.api.nvim_create_user_command('Dashboard', function()
   require('dashboard'):instance()
   vim.cmd("stopinsert")
-  vim.cmd("keepalt file Dashboard")
+  vim.cmd("silent! keepalt file Dashboard")
 end, {})
