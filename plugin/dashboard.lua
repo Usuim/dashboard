@@ -15,6 +15,8 @@ vim.api.nvim_create_autocmd('UIEnter', {
     then
       require('dashboard'):instance()
     end
+    vim.cmd("stopinsert")
+    vim.cmd("keepalt file Dashboard")
   end,
 })
 
